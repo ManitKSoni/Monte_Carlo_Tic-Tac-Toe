@@ -1,8 +1,6 @@
 import java.io.*;
 
-private final static int _ = 0;
-private final static int O = 1;
-private final static int X = 2;
+
 
 public static void main(String[] args) {
 
@@ -10,6 +8,9 @@ public static void main(String[] args) {
 
 public class Board
 {
+    private final static int _ = 0;
+    private final static int O = 1;
+    private final static int X = 2;
     private int[][] board;
     private int bsize = 3;
     private boolean gameover = false;
