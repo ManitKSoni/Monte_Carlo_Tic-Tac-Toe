@@ -1,6 +1,9 @@
 /**
  * Oliver's version of a board object
  */
+
+ // Notes: Unsure whether to put play turn function in Board.java or State.java, will decide tommorow
+ 
 public class Board {
     public static final int X = 1;
     public static final int O = 2;
@@ -51,6 +54,7 @@ public class Board {
         copyOfBoard.rowSize = this.rowSize;
         copyOfBoard.gameOver = this.gameOver;
         copyOfBoard.winner = winner;
+        return copyOfBoard;
     }
 
     public int index(int x, int y){
