@@ -25,6 +25,34 @@ public class Board {
         this.winner = 0;
     }
 
+    /**
+     * Constructor for custom height and width
+     */
+    public Board(int x, int y){
+        this.colSize = x;
+        this.rowSize = y;
+        for(int i = 0; i < colSize*rowSize; i++){
+            board[i] = 0;
+        }
+        this.gameOver = false;
+        this.winner = 0;
+    }
+
+    /**
+     * @return      returns a copy of the current Board
+     */
+    public Board copy(){
+        Board copyOfBoard = new Board();
+        for(int i = 0; i < this.rowSize * this.colSize; i++){
+            copyOfBoard.board[i] = this.board[i];
+        }
+        copyOfBoard.gameOver = this.gameOver;
+        copyOfBoard.colSize = this.colSize;
+        copyOfBoard.rowSize = this.rowSize;
+        copyOfBoard.gameOver = this.gameOver;
+        copyOfBoard.winner = winner;
+    }
+
     public int index(int x, int y){
         return (this.colSize * y + x);
     }
@@ -86,5 +114,11 @@ public class Board {
         }
 
 
+    }
+    /**
+     * returns a boolean representing if the game is over or not
+     */
+    public boolean isGameOver(){
+        return this.gameOver;
     }
 }
