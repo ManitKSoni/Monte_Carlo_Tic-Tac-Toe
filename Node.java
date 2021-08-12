@@ -12,7 +12,7 @@ public class Node {
         this.childArray = childArray;
     }
 
-    public visit(){
+    public void visit(){
         this.state.visitCount++;
     }
 }
@@ -28,7 +28,7 @@ class Tree{
     // Work in Progress
     public void print(){
         Node current = this.root;
-        System.println("Level 0: " + current.winRate);
+        System.out.println("Level 0: " + current.winRate);
         int level = 1;
         while(current != null){
             System.out.print("Level " + level + ": ");

@@ -1,3 +1,4 @@
+import java.util.*;
 public class State {
     Board board;
     int visitCount;
@@ -6,7 +7,7 @@ public class State {
 
     /**
      * Default Constructor for empty board
-     * @param player , player 1 or 2
+     * @param player    player 1 or 2
      */
     public State(int player){
         this.board = new Board();
@@ -32,5 +33,11 @@ public class State {
 
      public boolean isGameOver(){
          return this.board.isGameOver();
+     }
+
+     public List<State> allPossiblePlays(){
+        List<State> possiblePlays = new ArrayList<>();
+        
+        return possiblePlays;
      }
 }

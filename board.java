@@ -5,9 +5,10 @@ class Board
     private final static int _ = 0;
     private final static int O = 1;
     private final static int X = 2;
+    
     private int[][] board;
-    private int bsize = 3;
-    private boolean gameover = false;
+    private int bsize;
+    private boolean gameover;
 
     public Board() {
         // initialize board
@@ -16,7 +17,23 @@ class Board
                 board[i][j] = _;
             }
         }
+        this.bsize = 3;
+        this.gameover = false;
+    }
 
+    /**
+     * Make a copy of the current board
+     * @return
+     */
+    public Board copy(){
+        Board newBoard = new Board();
+        for(int i=0; i<this.board.length; i++){
+            for(int j = 0; j < this.board[0].length; j++){
+                newBoard.board[i][j] = this.board[i][j];
+            }
+        }
+        newBoard.bsize = this.bsize;
+        newBoard.gameOver = this.gameOver;
     }
 
     /** Inputs the turn onto the board. Returns 1 is successful
