@@ -34,7 +34,7 @@ class Board
 
     public boolean isGameOver() {
         int x = y = 0;
-        int first = second = third = 0;
+        int first,second,third = 0;
 
         // vertical wins
         for (x = 0; x < 3; x++) {
@@ -42,7 +42,7 @@ class Board
             second = board[x][1];
             third = board[x][2];
 
-            if (first == second == third) {
+            if (first == second && second == third) {
                 gameover = true;
                 return true;
             }
@@ -54,7 +54,7 @@ class Board
             second = board[y][1];
             third = board[y][2];
 
-            if (first == second == third) {
+            if (first == second && second == third) {
                 gameover = true;
                 return true;
             }
@@ -64,7 +64,7 @@ class Board
         first = board[0][0];
         second = board[1][1];
         third = board[2][2];
-        if (first == second == third) {
+        if (first == second && second == third) {
             gameover = true;
             return true;
         }
@@ -72,7 +72,7 @@ class Board
         first = board[2][0];
         second = board[1][1];
         third = board[0][2];
-        if (first == second == third) {
+        if (first == second && second == third) {
             gameover = true;
             return true;
         }
