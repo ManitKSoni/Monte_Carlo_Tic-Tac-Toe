@@ -1,12 +1,6 @@
 import java.io.*;
 
-
-
-public static void main(String[] args) {
-
-}
-
-public class Board
+class Board
 {
     private final static int _ = 0;
     private final static int O = 1;
