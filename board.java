@@ -14,6 +14,7 @@ public class Board {
     int colSize;
     int rowSize;
     char winner;
+    int[] possibleMoves;
 
     /**
      * Default Board Constructer
@@ -26,6 +27,9 @@ public class Board {
         }
         this.gameOver = false;
         this.winner = 0;
+        for(int i = 0; i < 9; i++){
+            possibleMoves[i] = i;
+        }
     }
 
     /**
@@ -39,6 +43,9 @@ public class Board {
         }
         this.gameOver = false;
         this.winner = 0;
+        for(int i = 0; i < 9; i++){
+            possibleMoves[i] = i;
+        }
     }
 
     /**
@@ -53,7 +60,8 @@ public class Board {
         copyOfBoard.colSize = this.colSize;
         copyOfBoard.rowSize = this.rowSize;
         copyOfBoard.gameOver = this.gameOver;
-        copyOfBoard.winner = winner;
+        copyOfBoard.winner = this.winner;
+        copyOfBoard.possibleMoves = this.possibleMoves;
         return copyOfBoard;
     }
 

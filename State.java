@@ -6,7 +6,7 @@ public class State {
     boolean gameOver;
 
     /**
-     * Default Constructor for empty board
+     * Constructor for empty board
      * @param player    player 1 or 2
      */
     public State(int player){
